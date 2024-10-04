@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj": {}
+    "D:\\,net\\FinalProject2\\doctoria\\doctoriaa\\Project.csproj": {}
   },
   "projects": {
-    "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj": {
+    "D:\\,net\\FinalProject2\\doctoria\\doctoriaa\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "D:\\,net\\FinalProject2\\doctoria\\doctoriaa\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj",
+        "projectPath": "D:\\,net\\FinalProject2\\doctoria\\doctoriaa\\Project.csproj",
         "packagesPath": "C:\\Users\\Salma Ibrahim\\.nuget\\packages\\",
-        "outputPath": "D:\\,net\\FinalProject2\\Project\\Project\\obj\\",
+        "outputPath": "D:\\,net\\FinalProject2\\doctoria\\doctoriaa\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
