@@ -1,0 +1,41 @@
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<User> SignInManager;
+
+<header id="header" class="header sticky-top">
+
+    <div class="branding d-flex align-items-center">
+
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Doctoria</h1>
+            </a>
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <nav id="navmenu" class="navmenu">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
+                    </li>
+                </nav>
+            }
+            else
+            {
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li>
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Register</a>
+                        </li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+                <a class="cta-btn d-none d-sm-block" href="">Are you a Doctor ?</a>
+            }
+
+        </div>
+
+    </div>
+
+</header>

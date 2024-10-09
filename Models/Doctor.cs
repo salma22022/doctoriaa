@@ -5,7 +5,7 @@ namespace Project.Models
     public class Doctor
     {
         // [Key]
-        public int DoctorId { get; set; } // Primary Key
+        public string DoctorId { get; set; } // Primary Key
         public string Bio { get; set; }
 
         // Foreign Key to Specialization
@@ -19,7 +19,7 @@ namespace Project.Models
 
         // Foreign Key to User
         [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public virtual User User { get; set; }
 
         // Navigation Properties

@@ -11,12 +11,12 @@ namespace Project.Models
 
         // Foreign Key to User
         [ForeignKey(nameof(User))]
-        public int? UserId { get; set; }
+        public string? UserId { get; set; }
         public User User { get; set; }
 
         // Foreign Key to Doc
         [ForeignKey(nameof(Doctor))]
-        public int? DoctorId { get; set; }
+        public string? DoctorId { get; set; }
         public Doctor Doc { get; set; }
 
     }
