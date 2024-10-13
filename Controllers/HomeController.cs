@@ -13,6 +13,14 @@ namespace Project.Controllers
             _logger = logger;
         }
 
+        public IActionResult Statuscode(int code)
+        {
+            if (code == 404)
+            {
+                return View("404");
+            }
+            return View("Error");
+        }
         public IActionResult Index()
         {
             return View();
@@ -26,7 +34,8 @@ namespace Project.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            return View();
         }
     }
 }

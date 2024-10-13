@@ -1,0 +1,73 @@
+﻿@model DayViewModel
+
+@{
+    ViewData["Title"] = "Add Day";
+}
+
+<form asp-action="Add" method="post">
+    <div id="days-container">
+        <!-- Template for adding new days dynamically -->
+        <div class="day-item">
+            <h4>Day Details</h4>
+            <input type="text" name="Days[0].DayName" placeholder="Day Name" required />
+            <input type="time" name="Days[0].StartTime" required />
+            <input type="time" name="Days[0].EndTime" required />
+            <input type="time" name="Days[0].AppointmentTime" required />
+            <input type="text" name="Days[0].WaitingPeriod" placeholder="Waiting Period" required />
+
+             <!-- BlockOutHours for each day -->
+             <div class="blockout-hours">
+                 <h5>BlockOut Hours</h5>
+                 <input type="time" name="Days[0].BlockOutHours[0].StartTime" placeholder="Start Time" required />
+                 <input type="time" name="Days[0].BlockOutHours[0].EndTime" placeholder="End Time" required />
+                 <button type="button" onclick="addBlockOutHour(this)">Add More BlockOut Hour</button>
+             </div> 
+        </div>
+    </div>
+    <button type="button" onclick="addDay()">Add More Day</button>
+    <input type="submit" value="Submit" />
+</form>
+
+<script>
+    // Add more days
+    function addDay() {
+        var dayCount = document.querySelectorAll('.day-item').length;
+        var container = document.getElementById('days-container');
+
+        var dayTemplate = `
+            <div class="day-item">
+                <h4>Day Details</h4>
+                <input type="text" name="Days[${dayCount}].DayName" placeholder="Day Name" required />
+                <input type="time" name="Days[${dayCount}].StartTime" required />
+                <input type="time" name="Days[${dayCount}].EndTime" required />
+                <input type="time" name="Days[${dayCount}].AppointmentTime" required />
+
+                <input type="text" name="Days[${dayCount}].WaitingPeriod" placeholder="Waiting Period" required />
+
+                <div class="blockout-hours">
+                    <h5>BlockOut Hours</h5>
+                    <input type="time" name="Days[${dayCount}].BlockOutHours[0].StartTime" placeholder="Start Time" required />
+                    <input type="time" name="Days[${dayCount}].BlockOutHours[0].EndTime" placeholder="End Time" required />
+                    <button type="button" onclick="addBlockOutHour(this)">Add More BlockOut Hour</button>
+                </div>
+            </div>
+        `;
+
+        container.insertAdjacentHTML('beforeend', dayTemplate);
+    }
+
+    // Add more BlockOut hours for a day
+    function addBlockOutHour(button) {
+        var blockOutHourContainer = button.closest('.blockout-hours');
+        var blockOutCount = blockOutHourContainer.querySelectorAll('input').length / 2;
+
+        var blockOutTemplate = `
+            <div>
+                <input type="time" name="${button.closest('.day-item').querySelector('input').name.replace('DayName', 'BlockOutHours['+blockOutCount+'].StartTime')}" placeholder="Start Time" required />
+                <input type="time" name="${button.closest('.day-item').querySelector('input').name.replace('DayName', 'BlockOutHours['+blockOutCount+'].EndTime')}" placeholder="End Time" required />
+            </div>
+        `;
+
+        blockOutHourContainer.insertAdjacentHTML('beforeend', blockOutTemplate);
+    }
+</script>

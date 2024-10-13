@@ -1,0 +1,56 @@
+2024-10-09 11:39:57.401 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-09 11:39:57.481 +03:00 [INF] Now listening on: https://localhost:7059
+2024-10-09 11:39:57.481 +03:00 [INF] Now listening on: http://localhost:5178
+2024-10-09 11:39:57.499 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-09 11:39:57.499 +03:00 [INF] Hosting environment: Development
+2024-10-09 11:39:57.499 +03:00 [INF] Content root path: C:\Users\user\Documents\doctoriaa
+2024-10-09 11:39:58.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-09 11:39:58.093 +03:00 [INF] Request: GET /day Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream Microsoft.AspNetCore.Http.QueryCollection
+2024-10-09 11:39:58.104 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-09 11:39:58.118 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-09 11:39:58.121 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-09 11:39:58.123 +03:00 [ERR] The view 'Index' was not found. Searched locations: ["/Views/Day/Index.cshtml","/Views/Shared/Index.cshtml"]
+2024-10-09 11:39:58.126 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 6.2061ms
+2024-10-09 11:39:58.128 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-09 11:39:58.128 +03:00 [ERR] Execprion:  The view 'Index' was not found. The following locations were searched:
+/Views/Day/Index.cshtml
+/Views/Shared/Index.cshtml /day GET 200
+2024-10-09 11:39:58.130 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 0 null 91.1111ms
+2024-10-09 11:40:00.790 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-09 11:40:00.792 +03:00 [INF] Request: GET /day Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream Microsoft.AspNetCore.Http.QueryCollection
+2024-10-09 11:40:00.794 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-09 11:40:00.794 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-09 11:40:00.795 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-09 11:40:00.795 +03:00 [ERR] The view 'Index' was not found. Searched locations: ["/Views/Day/Index.cshtml","/Views/Shared/Index.cshtml"]
+2024-10-09 11:40:00.795 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 0.7938ms
+2024-10-09 11:40:00.795 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-09 11:40:00.795 +03:00 [ERR] Execprion:  The view 'Index' was not found. The following locations were searched:
+/Views/Day/Index.cshtml
+/Views/Shared/Index.cshtml /day GET 200
+2024-10-09 11:40:00.796 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 0 null 5.8394ms
+2024-10-09 11:40:01.503 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-09 11:40:01.505 +03:00 [INF] Request: GET /day Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream Microsoft.AspNetCore.Http.QueryCollection
+2024-10-09 11:40:01.505 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-09 11:40:01.505 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-09 11:40:01.505 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-09 11:40:01.505 +03:00 [ERR] The view 'Index' was not found. Searched locations: ["/Views/Day/Index.cshtml","/Views/Shared/Index.cshtml"]
+2024-10-09 11:40:01.506 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 0.43ms
+2024-10-09 11:40:01.506 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-09 11:40:01.506 +03:00 [ERR] Execprion:  The view 'Index' was not found. The following locations were searched:
+/Views/Day/Index.cshtml
+/Views/Shared/Index.cshtml /day GET 200
+2024-10-09 11:40:01.506 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 0 null 3.0358ms
+2024-10-09 11:40:13.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/doctor - null null
+2024-10-09 11:40:13.808 +03:00 [INF] Request: GET /doctor Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream Microsoft.AspNetCore.Http.QueryCollection
+2024-10-09 11:40:13.809 +03:00 [INF] Executing endpoint 'Project.Controllers.DoctorController.Index (Project)'
+2024-10-09 11:40:13.813 +03:00 [INF] Route matched with {action = "Index", controller = "Doctor"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DoctorController (Project).
+2024-10-09 11:40:13.819 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-09 11:40:13.857 +03:00 [INF] Executed ViewResult - view Index executed in 42.389ms.
+2024-10-09 11:40:13.859 +03:00 [INF] Executed action Project.Controllers.DoctorController.Index (Project) in 45.441ms
+2024-10-09 11:40:13.859 +03:00 [INF] Executed endpoint 'Project.Controllers.DoctorController.Index (Project)'
+2024-10-09 11:40:13.860 +03:00 [INF] Response: 200 Microsoft.WebTools.BrowserLink.Net.ResponseStreamWrapper
+2024-10-09 11:40:13.865 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/doctor - 200 null text/html; charset=utf-8 59.2852ms
+2024-10-09 11:40:13.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-09 11:40:13.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-09 11:40:13.920 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 6.2408ms
+2024-10-09 11:40:13.937 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.9038ms

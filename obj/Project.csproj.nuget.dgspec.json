@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj": {}
+    "C:\\Users\\user\\Documents\\doctoriaa\\Project.csproj": {}
   },
   "projects": {
-    "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj": {
+    "C:\\Users\\user\\Documents\\doctoriaa\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\doctoriaa\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\Salma Ibrahim\\.nuget\\packages\\",
-        "outputPath": "D:\\,net\\FinalProject2\\Project\\Project\\obj\\",
+        "projectPath": "C:\\Users\\user\\Documents\\doctoriaa\\Project.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Documents\\doctoriaa\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Salma Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -63,6 +67,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -84,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

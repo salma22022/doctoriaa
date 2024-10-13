@@ -3,7 +3,7 @@
     ViewData["Title"] = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
+@* <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
 @if (Model.ShowRequestId)
@@ -12,14 +12,68 @@
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
 }
+ *@
 
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
-    It can result in displaying sensitive information from exceptions to end users.
-    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
-    and restarting the app.
-</p>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="~/assets/css/error.css" rel="stylesheet" />
+
+</head>
+
+	<!-- partial:index.partial.html -->
+	<main>
+		<div id="wrap">
+			<div class="hand hand-left">
+				<span class='hand-part part-top'></span>
+				<span class='hand-part part-middle'></span>
+				<span class='hand-part part-bottom'></span>
+			</div>
+			<div class="hand hand-right">
+				<span class='hand-part part-top'></span>
+				<span class='hand-part part-middle'></span>
+				<span class='hand-part part-bottom'></span>
+			</div>
+			<div class='line line-1'>
+				<div class="ball">5</div>
+			</div>
+			<div class='line line-2'>
+				<div class="ball">0</div>
+			</div>
+			<div class='line line-3'>
+				<div class="ball">0</div>
+			</div>
+			<div id="server">
+				<div class="eye eye-left"><span></span></div>
+				<div class="eye eye-right"><span></span></div>
+				<div class="block">
+					<div class="light"></div>
+				</div>
+				<div class="block">
+					<div class="light"></div>
+				</div>
+				<div class="block">
+					<div class="light"></div>
+				</div>
+				<div class="block">
+					<div class="light"></div>
+				</div>
+				<div class="block">
+					<div class="light"></div>
+				</div>
+				<div id="bottom-block">
+					<div class="bottom-line"></div>
+					<div id="bottom-light"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="code-error">
+			<h1>Internal Server Error!</h1>
+		</div>
+
+	</main>
+	<!-- partial -->
+

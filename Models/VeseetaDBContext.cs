@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Project.Models
 {
-    public class VeseetaDBContext : DbContext
+    public class VeseetaDBContext : IdentityDbContext
     {
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
         // optionsBuilder.UseSqlServer("Server=LAPTOP-I2QOALF5\\SQLEXPRESS;Database=VeseetaDBV1;Integrated Security=True;Encrypt=False");

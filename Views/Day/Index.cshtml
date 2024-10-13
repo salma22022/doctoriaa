@@ -1,0 +1,62 @@
+﻿@model List<Day>
+@{
+    ViewData["Title"] = "Days";
+}
+
+@if (ViewBag?.message != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.Message
+        </div>
+    }
+
+
+
+@if (!Model.Any())
+{
+    <div class="d-flex align-content-center justify-content-center mt-3 flex-column flex-wrap">
+        <h1>No data Found</h1>
+        <a href="/Day/Create" class="btn btn-primary mb-2 d-block">Add New Day</a>
+    </div>
+}
+else
+{
+   
+    <div class="d-flex align-content-center justify-content-center mt-3">
+        <div class="table-responsive w-75">
+            <table class="table table-hover table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">DayName</th>
+                        <th scope="col">Start Hour</th>
+                        <th scope="col">End Hour</th>
+                        <th scope="col">Waiting Period</th>
+                        @* <th scope="col">Appointment Time</th> *@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var day in Model)
+                    {
+                        <tr>
+                            <td>@day.DayName</td>
+                            <td>@day.StartTime</td>
+                            <td>@day.EndTime</td>
+                            <td>@day.WaitingPeriod</td>
+                            <td>
+                                <a href="@Url.Action("Delete", "Day", new { DayId = day.DayId })" class="btn btn-danger">Delete</a>
+                                <a href="@Url.Action("Details", "Day", new { DayId = day.DayId })" class="btn btn-primary ms-2">Details</a>
+                            </td>
+                            
+                            @* <td>@day.AppointmentTime</td> *@
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <a href="/Day/Create" class="btn btn-primary mb-2">Add New Day</a>
+        </div>
+    </div>
+ }
+   
+      
+
