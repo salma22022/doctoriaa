@@ -16,7 +16,7 @@ namespace Project.Models
 
         // Foreign Key to User
         [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
         // Foreign Key to Day
         [ForeignKey(nameof(Day))]

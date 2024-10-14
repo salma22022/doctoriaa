@@ -6,7 +6,7 @@
         public int ClinicId { get; set; } // Primary Key
         public string Name { get; set; }
         public double Price { get; set; }
-        public Location Location { get; set; }
+        public Location? Location { get; set; }
 
         // Navigation Properties
         public Doctor doctor { get; set; }

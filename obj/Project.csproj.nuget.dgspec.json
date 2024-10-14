@@ -1,32 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj": {}
+    "/Users/nourkasim/Downloads/programming/courses/DEPI - .NET/Doctoria /New Code/doctoriaa/Project.csproj": {}
   },
   "projects": {
-    "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj": {
+    "/Users/nourkasim/Downloads/programming/courses/DEPI - .NET/Doctoria /New Code/doctoriaa/Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "/Users/nourkasim/Downloads/programming/courses/DEPI - .NET/Doctoria /New Code/doctoriaa/Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\,net\\FinalProject2\\Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\Salma Ibrahim\\.nuget\\packages\\",
-        "outputPath": "D:\\,net\\FinalProject2\\Project\\Project\\obj\\",
+        "projectPath": "/Users/nourkasim/Downloads/programming/courses/DEPI - .NET/Doctoria /New Code/doctoriaa/Project.csproj",
+        "packagesPath": "/Users/nourkasim/.nuget/packages/",
+        "outputPath": "/Users/nourkasim/Downloads/programming/courses/DEPI - .NET/Doctoria /New Code/doctoriaa/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Salma Ibrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/nourkasim/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,6 +44,22 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -84,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
