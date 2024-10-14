@@ -35,7 +35,7 @@ public class DoctorAccountController : Controller
 
             if (result.Succeeded)
             {
-                return Content("Doctor profile");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -70,7 +70,7 @@ public class DoctorAccountController : Controller
 
             if (result.Succeeded)
             {
-                var specialization = new Specialization { SpecializationName = model.SpecializationName };
+                var specialization = new Specialization { Name = model.SpecializationName };
                 Clinic clinic = new Clinic { Name = model.ClinicName };
                 Doctor doctor = new Doctor
                 {

@@ -10,7 +10,7 @@ namespace Project.Models
         public string Bio { get; set; }
         public string LicenseNumber { get; set; }
 
-        public int AverageRate { get; set; }
+        //public int AverageRate { get; set; }
 
         // Foreign Key to Specialization
         public virtual Specialization Specialization { get; set; }

@@ -1,5 +1,6 @@
 @using Microsoft.AspNetCore.Identity;
 @inject SignInManager<User> SignInManager;
+@inject UserManager<User> UserManager;
 
 <header id="header" class="header sticky-top">
 
@@ -12,10 +13,26 @@
 
             @if (SignInManager.IsSignedIn(User))
             {
+                var loggedUser = await UserManager.GetUserAsync(User);
+                var isDoctor = await UserManager.IsInRoleAsync(loggedUser, "Doctor");
                 <nav id="navmenu" class="navmenu">
+                    <ul>
+                    @if (isDoctor)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Days</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Profile</a>
+                        </li>
+                    }
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
                     </li>
+                    </ul>
                 </nav>
             }
             else

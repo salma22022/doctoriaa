@@ -4,7 +4,7 @@
     {
         //[Key]
         public int SpecializationId { get; set; } // Primary Key
-        public SpecializationName SpecializationName { get; set; }
+        public SpecializationName Name { get; set; }
 
         // Navigation Properties
         public ICollection<Doctor> Doctors { get; set; }
