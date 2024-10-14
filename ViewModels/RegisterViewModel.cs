@@ -11,7 +11,7 @@ public class RegisterViewModel
 
     [Required(ErrorMessage ="Phone number is required")] // phone
     [DataType(DataType.PhoneNumber)]
-    public string Phone { get; set; }
+    public string PhoneNumber { get; set; }
 
     [Required(ErrorMessage = "Birthdate is required")] // birthdate
     [DataType(DataType.Date)]
@@ -33,9 +33,4 @@ public class RegisterViewModel
     [Display(Name ="Confirm password")]
     public string ConfirmPassword { get; set; }
 
-}
-public enum Gender
-{
-    Male,
-    Female
 }
