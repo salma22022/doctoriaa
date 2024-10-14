@@ -29,5 +29,15 @@ namespace Project.Controllers
             return RedirectToAction("Details","Day", new {DayId = DayId});
 
         }
+
+        public IActionResult Create() { 
+            return View();
+        }
+
+        //public async Task<IActionResult> Add()
+        //{
+
+        //}
+
     }
 }

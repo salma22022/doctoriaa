@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Documents\doctoriaa
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/Documents/doctoriaa/Views/BlockOutHours/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tPdXRIb3Vyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Documents/doctoriaa/Views/Day/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

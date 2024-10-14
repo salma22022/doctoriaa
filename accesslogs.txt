@@ -12135,3 +12135,1299 @@ ORDER BY [t].[DayId]
 2024-10-13 18:50:48.013 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
 2024-10-13 18:50:48.014 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.7811ms
 2024-10-13 18:50:48.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.547ms
+2024-10-13 18:51:34.473 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-13 18:51:34.552 +03:00 [INF] Now listening on: https://localhost:7059
+2024-10-13 18:51:34.552 +03:00 [INF] Now listening on: http://localhost:5178
+2024-10-13 18:51:34.569 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 18:51:34.570 +03:00 [INF] Hosting environment: Development
+2024-10-13 18:51:34.570 +03:00 [INF] Content root path: C:\Users\user\Documents\doctoriaa
+2024-10-13 18:51:34.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=29 - null null
+2024-10-13 18:51:34.854 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 18:51:34.871 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 18:51:35.715 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-13 18:51:35.783 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-13 18:51:35.829 +03:00 [INF] Executed ViewResult - view Details executed in 46.5626ms.
+2024-10-13 18:51:35.833 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 960.6817ms
+2024-10-13 18:51:35.833 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 18:51:35.836 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 990.7659 ms
+2024-10-13 18:51:35.847 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=29 - 200 null text/html; charset=utf-8 1051.5712ms
+2024-10-13 18:51:35.859 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 18:51:35.859 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:51:35.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 5.1931ms
+2024-10-13 18:51:35.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.8032ms
+2024-10-13 18:51:38.023 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:51:38.023 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.7383ms
+2024-10-13 18:51:38.436 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:51:38.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.567ms
+2024-10-13 18:51:38.846 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:51:38.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.4314ms
+2024-10-13 18:51:40.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Delete?DayId=29 - null null
+2024-10-13 18:51:40.596 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-13 18:51:40.598 +03:00 [INF] Route matched with {action = "Delete", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 18:51:40.622 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2024-10-13 18:51:40.633 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime], [b0].[BookingId], [b0].[CancelReasons], [b0].[CanceledBy], [b0].[Date], [b0].[DayId], [b0].[InsuranceId], [b0].[Status], [b0].[Time], [b0].[UserId]
+FROM (
+    SELECT TOP(1) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+LEFT JOIN [Bookings] AS [b0] ON [t].[DayId] = [b0].[DayId]
+ORDER BY [t].[DayId], [b].[BlockOutHoursId]
+2024-10-13 18:51:40.691 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Days]
+OUTPUT 1
+WHERE [DayId] = @p0;
+2024-10-13 18:51:40.700 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-13 18:51:40.701 +03:00 [INF] Executed action Project.Controllers.DayController.Delete (Project) in 103.0047ms
+2024-10-13 18:51:40.701 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-13 18:51:40.701 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 107.0579 ms
+2024-10-13 18:51:40.701 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Delete?DayId=29 - 302 0 null 112.0096ms
+2024-10-13 18:51:40.706 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 18:51:40.709 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 18:51:40.710 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 18:51:40.761 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 18:51:40.782 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 18:51:40.785 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 18:51:40.794 +03:00 [INF] Executed ViewResult - view Index executed in 10.1945ms.
+2024-10-13 18:51:40.795 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 84.7749ms
+2024-10-13 18:51:40.795 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 18:51:40.795 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 86.1478 ms
+2024-10-13 18:51:40.795 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 88.8785ms
+2024-10-13 18:51:40.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 18:51:40.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:51:40.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.4406ms
+2024-10-13 18:51:40.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.4071ms
+2024-10-13 18:51:43.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 18:51:43.897 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 18:51:43.897 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 18:51:43.903 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 18:51:43.904 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 18:51:43.907 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 18:51:43.908 +03:00 [INF] Executed ViewResult - view Index executed in 1.5944ms.
+2024-10-13 18:51:43.909 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 11.0419ms
+2024-10-13 18:51:43.909 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 18:51:43.909 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 11.4400 ms
+2024-10-13 18:51:43.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 13.4521ms
+2024-10-13 18:51:43.934 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:51:43.934 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 18:51:43.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2955ms
+2024-10-13 18:51:43.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.9251ms
+2024-10-13 18:59:01.366 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Create - null null
+2024-10-13 18:59:01.371 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-13 18:59:01.374 +03:00 [INF] Route matched with {action = "Create", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create() on controller Project.Controllers.DayController (Project).
+2024-10-13 18:59:01.376 +03:00 [INF] Executing ViewResult, running view Create.
+2024-10-13 18:59:01.385 +03:00 [INF] Executed ViewResult - view Create executed in 10.1763ms.
+2024-10-13 18:59:01.385 +03:00 [INF] Executed action Project.Controllers.DayController.Create (Project) in 10.8694ms
+2024-10-13 18:59:01.385 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-13 18:59:01.385 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 13.9741 ms
+2024-10-13 18:59:01.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Create - 200 null text/html; charset=utf-8 19.5223ms
+2024-10-13 18:59:01.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:59:01.417 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 18:59:01.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2894ms
+2024-10-13 18:59:01.422 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.6921ms
+2024-10-13 18:59:25.167 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7059/Day/Add - application/x-www-form-urlencoded 732
+2024-10-13 18:59:25.170 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Add (Project)'
+2024-10-13 18:59:25.177 +03:00 [INF] Route matched with {action = "Add", controller = "Day"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Project.ViewModels.DayViewModel) on controller Project.Controllers.DayController (Project).
+2024-10-13 18:59:25.206 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 18:59:25.235 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Time), @p4='?' (DbType = Time), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Days] ([AppointmentTime], [DayName], [DoctorId], [EndTime], [StartTime], [WaitingPeriod])
+OUTPUT INSERTED.[DayId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-10-13 18:59:25.252 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-13 18:59:25.256 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-13 18:59:25.257 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-13 18:59:25.258 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-13 18:59:25.258 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-13 18:59:25.259 +03:00 [INF] Executed action Project.Controllers.DayController.Add (Project) in 81.1115ms
+2024-10-13 18:59:25.259 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Add (Project)'
+2024-10-13 18:59:25.259 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 88.8018 ms
+2024-10-13 18:59:25.259 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7059/Day/Add - 302 0 null 91.4974ms
+2024-10-13 18:59:25.263 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 18:59:25.264 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 18:59:25.264 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 18:59:25.266 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 18:59:25.268 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 18:59:25.269 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 18:59:25.272 +03:00 [INF] Executed ViewResult - view Index executed in 2.4127ms.
+2024-10-13 18:59:25.272 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 7.5423ms
+2024-10-13 18:59:25.272 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 18:59:25.272 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 7.7971 ms
+2024-10-13 18:59:25.272 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 9.01ms
+2024-10-13 18:59:25.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 18:59:25.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:59:25.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.7307ms
+2024-10-13 18:59:25.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.215ms
+2024-10-13 18:59:27.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-13 18:59:27.173 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 18:59:27.173 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 18:59:27.178 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-13 18:59:27.180 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-13 18:59:27.181 +03:00 [INF] Executed ViewResult - view Details executed in 1.3637ms.
+2024-10-13 18:59:27.181 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 8.1977ms
+2024-10-13 18:59:27.181 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 18:59:27.181 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 8.4524 ms
+2024-10-13 18:59:27.181 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 11.2653ms
+2024-10-13 18:59:27.205 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 18:59:27.205 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 18:59:27.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2253ms
+2024-10-13 18:59:27.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.5654ms
+2024-10-13 19:03:47.527 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/BlockOutHours/Delete?HourId=34&DayId=31 - null null
+2024-10-13 19:03:47.534 +03:00 [INF] Executing endpoint 'Project.Controllers.BlockOutHoursController.Delete (Project)'
+2024-10-13 19:03:47.536 +03:00 [INF] Route matched with {action = "Delete", controller = "BlockOutHours"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32, Int32) on controller Project.Controllers.BlockOutHoursController (Project).
+2024-10-13 19:03:47.558 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__HourId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM [BlockOutHours] AS [b]
+WHERE [b].[BlockOutHoursId] = @__HourId_0
+2024-10-13 19:03:47.563 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+2024-10-13 19:03:47.564 +03:00 [INF] Executing RedirectResult, redirecting to /Day/Details?DayId=31.
+2024-10-13 19:03:47.565 +03:00 [INF] Executed action Project.Controllers.BlockOutHoursController.Delete (Project) in 29.2556ms
+2024-10-13 19:03:47.565 +03:00 [INF] Executed endpoint 'Project.Controllers.BlockOutHoursController.Delete (Project)'
+2024-10-13 19:03:47.565 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 31.3849 ms
+2024-10-13 19:03:47.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/BlockOutHours/Delete?HourId=34&DayId=31 - 302 0 null 38.7009ms
+2024-10-13 19:03:47.572 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-13 19:03:47.573 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:03:47.573 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 19:03:47.577 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-13 19:03:47.580 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-13 19:03:47.584 +03:00 [INF] Executed ViewResult - view Details executed in 4.0794ms.
+2024-10-13 19:03:47.584 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 11.1007ms
+2024-10-13 19:03:47.584 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:03:47.584 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 11.3803 ms
+2024-10-13 19:03:47.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 12.7917ms
+2024-10-13 19:03:47.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:03:47.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:03:47.617 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.225ms
+2024-10-13 19:03:47.620 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.0836ms
+2024-10-13 19:03:49.737 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-13 19:03:49.740 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:03:49.740 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 19:03:49.741 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-13 19:03:49.742 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-13 19:03:49.744 +03:00 [INF] Executed ViewResult - view Details executed in 2.0014ms.
+2024-10-13 19:03:49.744 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 4.5171ms
+2024-10-13 19:03:49.744 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:03:49.744 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 4.8788 ms
+2024-10-13 19:03:49.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 7.3862ms
+2024-10-13 19:03:49.768 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:03:49.768 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:03:49.768 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2505ms
+2024-10-13 19:03:49.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.9878ms
+2024-10-13 19:04:01.478 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-13 19:04:01.480 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:04:01.480 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 19:04:01.482 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-13 19:04:01.482 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-13 19:04:01.483 +03:00 [INF] Executed ViewResult - view Details executed in 1.0487ms.
+2024-10-13 19:04:01.483 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 3.1893ms
+2024-10-13 19:04:01.483 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:04:01.483 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 3.6177 ms
+2024-10-13 19:04:01.483 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 5.2811ms
+2024-10-13 19:04:01.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:04:01.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:04:01.509 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.3299ms
+2024-10-13 19:04:01.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.3992ms
+2024-10-13 19:04:03.955 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:04:03.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2021ms
+2024-10-13 19:04:04.438 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:04:04.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2904ms
+2024-10-13 19:04:06.029 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 19:04:06.031 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:04:06.031 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 19:04:06.036 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 19:04:06.038 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 19:04:06.039 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 19:04:06.040 +03:00 [INF] Executed ViewResult - view Index executed in 0.7201ms.
+2024-10-13 19:04:06.040 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 8.6604ms
+2024-10-13 19:04:06.040 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:04:06.040 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 8.9083 ms
+2024-10-13 19:04:06.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 11.4025ms
+2024-10-13 19:04:06.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:04:06.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:04:06.064 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.242ms
+2024-10-13 19:04:06.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.7697ms
+2024-10-13 19:07:10.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 19:07:10.072 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:07:10.072 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 19:07:10.081 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 19:07:10.084 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 19:07:10.084 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 19:07:10.085 +03:00 [INF] Executed ViewResult - view Index executed in 0.5949ms.
+2024-10-13 19:07:10.085 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 12.7342ms
+2024-10-13 19:07:10.085 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:07:10.085 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 12.9714 ms
+2024-10-13 19:07:10.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 17.0362ms
+2024-10-13 19:07:10.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:07:10.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:07:10.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2402ms
+2024-10-13 19:07:10.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.0595ms
+2024-10-13 19:12:26.498 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Create - null null
+2024-10-13 19:12:26.504 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-13 19:12:26.504 +03:00 [INF] Route matched with {action = "Create", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create() on controller Project.Controllers.DayController (Project).
+2024-10-13 19:12:26.504 +03:00 [INF] Executing ViewResult, running view Create.
+2024-10-13 19:12:26.506 +03:00 [INF] Executed ViewResult - view Create executed in 1.6793ms.
+2024-10-13 19:12:26.506 +03:00 [INF] Executed action Project.Controllers.DayController.Create (Project) in 2.0834ms
+2024-10-13 19:12:26.506 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-13 19:12:26.506 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 2.5232 ms
+2024-10-13 19:12:26.506 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Create - 200 null text/html; charset=utf-8 8.1515ms
+2024-10-13 19:12:26.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:12:26.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:12:26.532 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.211ms
+2024-10-13 19:12:26.534 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.8369ms
+2024-10-13 19:12:28.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:12:28.007 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2669ms
+2024-10-13 19:14:45.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 19:14:45.806 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:14:45.807 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 19:14:45.821 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 19:14:45.825 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 19:14:45.825 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 19:14:45.826 +03:00 [INF] Executed ViewResult - view Index executed in 0.6896ms.
+2024-10-13 19:14:45.826 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 19.4493ms
+2024-10-13 19:14:45.826 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:14:45.826 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 19.8435 ms
+2024-10-13 19:14:45.826 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 25.2538ms
+2024-10-13 19:14:45.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:14:45.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:14:45.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2947ms
+2024-10-13 19:14:45.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.7081ms
+2024-10-13 19:14:52.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-13 19:14:52.098 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:14:52.098 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-13 19:14:52.100 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-13 19:14:52.101 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-13 19:14:52.102 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-13 19:14:52.102 +03:00 [INF] Executed ViewResult - view Index executed in 0.5341ms.
+2024-10-13 19:14:52.102 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 4.1597ms
+2024-10-13 19:14:52.102 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-13 19:14:52.103 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 4.8106 ms
+2024-10-13 19:14:52.103 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 7.0484ms
+2024-10-13 19:14:52.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:14:52.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:14:52.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2797ms
+2024-10-13 19:14:52.126 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.7598ms
+2024-10-13 19:21:49.580 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-13 19:21:49.585 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:21:49.585 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-13 19:21:49.600 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-13 19:21:49.601 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-13 19:21:49.602 +03:00 [INF] Executed ViewResult - view Details executed in 1.0007ms.
+2024-10-13 19:21:49.602 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 17.4595ms
+2024-10-13 19:21:49.602 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-13 19:21:49.602 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 17.9492 ms
+2024-10-13 19:21:49.603 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 22.9059ms
+2024-10-13 19:21:49.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 19:21:49.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-13 19:21:49.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.1724ms
+2024-10-13 19:21:49.630 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.5732ms
+2024-10-14 10:41:23.120 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-14 10:41:23.277 +03:00 [INF] Now listening on: https://localhost:7059
+2024-10-14 10:41:23.277 +03:00 [INF] Now listening on: http://localhost:5178
+2024-10-14 10:41:23.295 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-14 10:41:23.296 +03:00 [INF] Hosting environment: Development
+2024-10-14 10:41:23.296 +03:00 [INF] Content root path: C:\Users\user\Documents\doctoriaa
+2024-10-14 10:41:24.778 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/ - null null
+2024-10-14 10:41:24.933 +03:00 [INF] Executing endpoint 'Project.Controllers.HomeController.Index (Project)'
+2024-10-14 10:41:24.959 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.HomeController (Project).
+2024-10-14 10:41:24.973 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 10:41:25.033 +03:00 [INF] Executed ViewResult - view Index executed in 64.566ms.
+2024-10-14 10:41:25.040 +03:00 [INF] Executed action Project.Controllers.HomeController.Index (Project) in 80.4815ms
+2024-10-14 10:41:25.041 +03:00 [INF] Executed endpoint 'Project.Controllers.HomeController.Index (Project)'
+2024-10-14 10:41:25.044 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 131.4806 ms
+2024-10-14 10:41:25.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/ - 200 null text/html; charset=utf-8 273.4806ms
+2024-10-14 10:41:25.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2024-10-14 10:41:25.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/fontawesome-free/css/all.min.css - null null
+2024-10-14 10:41:25.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:41:25.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2024-10-14 10:41:25.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/aos/aos.css - null null
+2024-10-14 10:41:25.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/glightbox/css/glightbox.min.css - null null
+2024-10-14 10:41:25.178 +03:00 [INF] The file /assets/vendor/fontawesome-free/css/all.min.css was not modified
+2024-10-14 10:41:25.178 +03:00 [INF] The file /assets/vendor/glightbox/css/glightbox.min.css was not modified
+2024-10-14 10:41:25.178 +03:00 [INF] The file /assets/vendor/aos/aos.css was not modified
+2024-10-14 10:41:25.178 +03:00 [INF] The file /assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2024-10-14 10:41:25.178 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 6.4086 ms
+2024-10-14 10:41:25.178 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 6.3834 ms
+2024-10-14 10:41:25.178 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 3.9097 ms
+2024-10-14 10:41:25.179 +03:00 [INF] The file /assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2024-10-14 10:41:25.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/glightbox/css/glightbox.min.css - 304 null text/css 4.6071ms
+2024-10-14 10:41:25.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/fontawesome-free/css/all.min.css - 304 null text/css 9.5941ms
+2024-10-14 10:41:25.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 9.6064ms
+2024-10-14 10:41:25.179 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 6.6956 ms
+2024-10-14 10:41:25.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 9.8475ms
+2024-10-14 10:41:25.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/swiper/swiper-bundle.min.css - null null
+2024-10-14 10:41:25.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/css/main.css - null null
+2024-10-14 10:41:25.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2024-10-14 10:41:25.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 10.155ms
+2024-10-14 10:41:25.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/aos/aos.js - null null
+2024-10-14 10:41:25.180 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 6.2000 ms
+2024-10-14 10:41:25.181 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/aos/aos.css - 304 null text/css 10.4189ms
+2024-10-14 10:41:25.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/purecounter/purecounter_vanilla.js - null null
+2024-10-14 10:41:25.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/swiper/swiper-bundle.min.js - null null
+2024-10-14 10:41:25.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/js/main.js - null null
+2024-10-14 10:41:25.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/php-email-form/validate.js - null null
+2024-10-14 10:41:25.182 +03:00 [INF] The file /assets/vendor/swiper/swiper-bundle.min.css was not modified
+2024-10-14 10:41:25.182 +03:00 [INF] The file /assets/css/main.css was not modified
+2024-10-14 10:41:25.182 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.4265 ms
+2024-10-14 10:41:25.182 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.4133 ms
+2024-10-14 10:41:25.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/css/main.css - 304 null text/css 3.0529ms
+2024-10-14 10:41:25.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/swiper/swiper-bundle.min.css - 304 null text/css 3.1414ms
+2024-10-14 10:41:25.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:41:25.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/glightbox/js/glightbox.min.js - null null
+2024-10-14 10:41:25.183 +03:00 [INF] The file /assets/vendor/glightbox/js/glightbox.min.js was not modified
+2024-10-14 10:41:25.183 +03:00 [INF] The file /assets/vendor/bootstrap/js/bootstrap.bundle.min.js was not modified
+2024-10-14 10:41:25.183 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.2420 ms
+2024-10-14 10:41:25.183 +03:00 [INF] The file /assets/vendor/purecounter/purecounter_vanilla.js was not modified
+2024-10-14 10:41:25.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 304 null text/javascript 3.8228ms
+2024-10-14 10:41:25.183 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.4231 ms
+2024-10-14 10:41:25.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/purecounter/purecounter_vanilla.js - 304 null text/javascript 3.6027ms
+2024-10-14 10:41:25.184 +03:00 [INF] The file /assets/js/main.js was not modified
+2024-10-14 10:41:25.184 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.2961 ms
+2024-10-14 10:41:25.184 +03:00 [INF] The file /assets/vendor/swiper/swiper-bundle.min.js was not modified
+2024-10-14 10:41:25.183 +03:00 [INF] The file /assets/vendor/aos/aos.js was not modified
+2024-10-14 10:41:25.184 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.4119 ms
+2024-10-14 10:41:25.184 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 1.6542 ms
+2024-10-14 10:41:25.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/swiper/swiper-bundle.min.js - 304 null text/javascript 3.5401ms
+2024-10-14 10:41:25.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/aos/aos.js - 304 null text/javascript 4.5864ms
+2024-10-14 10:41:25.184 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.9890 ms
+2024-10-14 10:41:25.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/js/main.js - 304 null text/javascript 3.3492ms
+2024-10-14 10:41:25.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/glightbox/js/glightbox.min.js - 304 null text/javascript 2.3254ms
+2024-10-14 10:41:25.184 +03:00 [INF] The file /assets/vendor/php-email-form/validate.js was not modified
+2024-10-14 10:41:25.185 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.9446 ms
+2024-10-14 10:41:25.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/php-email-form/validate.js - 304 null text/javascript 4.0047ms
+2024-10-14 10:41:25.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 111.5449ms
+2024-10-14 10:41:25.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2024-10-14 10:41:25.312 +03:00 [INF] The file /assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2024-10-14 10:41:25.312 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 2.2375 ms
+2024-10-14 10:41:25.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 2.8072ms
+2024-10-14 10:41:25.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/img/favicon.png - null null
+2024-10-14 10:41:25.466 +03:00 [INF] The file /assets/img/favicon.png was not modified
+2024-10-14 10:41:25.466 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 0.3513 ms
+2024-10-14 10:41:25.466 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/img/favicon.png - 304 null image/png 0.8725ms
+2024-10-14 10:42:28.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-14 10:42:28.123 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:42:28.125 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 10:42:28.976 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 10:42:29.068 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 10:42:29.107 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 10:42:29.134 +03:00 [INF] Executed ViewResult - view Index executed in 27.3994ms.
+2024-10-14 10:42:29.134 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 1009.3378ms
+2024-10-14 10:42:29.134 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:42:29.134 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 1012.5148 ms
+2024-10-14 10:42:29.141 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 null text/html; charset=utf-8 1021.7926ms
+2024-10-14 10:42:29.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:42:29.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.7759ms
+2024-10-14 10:42:29.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:42:29.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.8231ms
+2024-10-14 10:42:31.989 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Create - null null
+2024-10-14 10:42:31.992 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-14 10:42:31.994 +03:00 [INF] Route matched with {action = "Create", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create() on controller Project.Controllers.DayController (Project).
+2024-10-14 10:42:31.996 +03:00 [INF] Executing ViewResult, running view Create.
+2024-10-14 10:42:32.006 +03:00 [INF] Executed ViewResult - view Create executed in 10.7022ms.
+2024-10-14 10:42:32.006 +03:00 [INF] Executed action Project.Controllers.DayController.Create (Project) in 12.3442ms
+2024-10-14 10:42:32.006 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-14 10:42:32.006 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 15.4165 ms
+2024-10-14 10:42:32.006 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Create - 200 null text/html; charset=utf-8 17.712ms
+2024-10-14 10:42:32.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:42:32.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:42:32.034 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.3894ms
+2024-10-14 10:42:32.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.4507ms
+2024-10-14 10:42:34.997 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:42:34.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.3337ms
+2024-10-14 10:42:36.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-14 10:42:36.801 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 10:42:36.806 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 10:42:36.865 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-14 10:42:36.874 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-14 10:42:36.878 +03:00 [INF] Executed ViewResult - view Details executed in 4.6783ms.
+2024-10-14 10:42:36.878 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 72.1892ms
+2024-10-14 10:42:36.878 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 10:42:36.878 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 78.0206 ms
+2024-10-14 10:42:36.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 80.2288ms
+2024-10-14 10:42:36.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:42:36.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:42:36.901 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2476ms
+2024-10-14 10:42:36.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.9321ms
+2024-10-14 10:43:52.496 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/BlockOutHours/Delete?HourId=33&DayId=31 - null null
+2024-10-14 10:43:52.500 +03:00 [INF] Executing endpoint 'Project.Controllers.BlockOutHoursController.Delete (Project)'
+2024-10-14 10:43:52.501 +03:00 [INF] Route matched with {action = "Delete", controller = "BlockOutHours"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32, Int32) on controller Project.Controllers.BlockOutHoursController (Project).
+2024-10-14 10:43:52.545 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__HourId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM [BlockOutHours] AS [b]
+WHERE [b].[BlockOutHoursId] = @__HourId_0
+2024-10-14 10:43:52.593 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+2024-10-14 10:43:52.598 +03:00 [INF] Executing RedirectResult, redirecting to /Day/Details?DayId=31.
+2024-10-14 10:43:52.600 +03:00 [INF] Executed action Project.Controllers.BlockOutHoursController.Delete (Project) in 98.8472ms
+2024-10-14 10:43:52.600 +03:00 [INF] Executed endpoint 'Project.Controllers.BlockOutHoursController.Delete (Project)'
+2024-10-14 10:43:52.600 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 100.5625 ms
+2024-10-14 10:43:52.600 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/BlockOutHours/Delete?HourId=33&DayId=31 - 302 0 null 104.4593ms
+2024-10-14 10:43:52.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - null null
+2024-10-14 10:43:52.607 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 10:43:52.607 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 10:43:52.612 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-14 10:43:52.614 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-14 10:43:52.619 +03:00 [INF] Executed ViewResult - view Details executed in 4.6082ms.
+2024-10-14 10:43:52.619 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 11.9482ms
+2024-10-14 10:43:52.619 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 10:43:52.619 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 12.1869 ms
+2024-10-14 10:43:52.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=31 - 200 null text/html; charset=utf-8 13.4556ms
+2024-10-14 10:43:52.648 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:43:52.648 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:43:52.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.1853ms
+2024-10-14 10:43:52.651 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.8347ms
+2024-10-14 10:44:00.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/ - null null
+2024-10-14 10:44:00.210 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:44:00.211 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:00.213 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 10:44:00.215 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 10:44:00.216 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 10:44:00.218 +03:00 [INF] Executed ViewResult - view Index executed in 1.8713ms.
+2024-10-14 10:44:00.218 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 7.4047ms
+2024-10-14 10:44:00.218 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:44:00.218 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 8.6021 ms
+2024-10-14 10:44:00.218 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/ - 200 null text/html; charset=utf-8 10.7597ms
+2024-10-14 10:44:00.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:44:00.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:44:00.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.1973ms
+2024-10-14 10:44:00.247 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.9235ms
+2024-10-14 10:44:02.487 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Delete?DayId=31 - null null
+2024-10-14 10:44:02.489 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 10:44:02.490 +03:00 [INF] Route matched with {action = "Delete", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:02.503 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2024-10-14 10:44:02.513 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime], [b0].[BookingId], [b0].[CancelReasons], [b0].[CanceledBy], [b0].[Date], [b0].[DayId], [b0].[InsuranceId], [b0].[Status], [b0].[Time], [b0].[UserId]
+FROM (
+    SELECT TOP(1) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+LEFT JOIN [Bookings] AS [b0] ON [t].[DayId] = [b0].[DayId]
+ORDER BY [t].[DayId], [b].[BlockOutHoursId]
+2024-10-14 10:44:02.543 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p1;
+DELETE FROM [Days]
+OUTPUT 1
+WHERE [DayId] = @p2;
+2024-10-14 10:44:02.549 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 10:44:02.549 +03:00 [INF] Executed action Project.Controllers.DayController.Delete (Project) in 58.8428ms
+2024-10-14 10:44:02.549 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 10:44:02.549 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 60.7585 ms
+2024-10-14 10:44:02.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Delete?DayId=31 - 302 0 null 62.2795ms
+2024-10-14 10:44:02.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 10:44:02.558 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:44:02.558 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:02.559 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 10:44:02.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 10:44:02.561 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 10:44:02.564 +03:00 [INF] Executed ViewResult - view Index executed in 3.3316ms.
+2024-10-14 10:44:02.565 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 6.4129ms
+2024-10-14 10:44:02.565 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:44:02.565 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 6.6105 ms
+2024-10-14 10:44:02.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 7.744ms
+2024-10-14 10:44:02.587 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:44:02.587 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:44:02.587 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2088ms
+2024-10-14 10:44:02.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.3227ms
+2024-10-14 10:44:03.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Create - null null
+2024-10-14 10:44:03.902 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-14 10:44:03.903 +03:00 [INF] Route matched with {action = "Create", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create() on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:03.903 +03:00 [INF] Executing ViewResult, running view Create.
+2024-10-14 10:44:03.905 +03:00 [INF] Executed ViewResult - view Create executed in 2.2862ms.
+2024-10-14 10:44:03.905 +03:00 [INF] Executed action Project.Controllers.DayController.Create (Project) in 2.9006ms
+2024-10-14 10:44:03.906 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-14 10:44:03.906 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 3.3379 ms
+2024-10-14 10:44:03.906 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Create - 200 null text/html; charset=utf-8 4.8963ms
+2024-10-14 10:44:03.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:44:03.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:44:03.925 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2159ms
+2024-10-14 10:44:03.927 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.5326ms
+2024-10-14 10:44:35.158 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7059/Day/Add - application/x-www-form-urlencoded 732
+2024-10-14 10:44:35.159 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Add (Project)'
+2024-10-14 10:44:35.168 +03:00 [INF] Route matched with {action = "Add", controller = "Day"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Project.ViewModels.DayViewModel) on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:35.189 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 10:44:35.217 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Time), @p4='?' (DbType = Time), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Days] ([AppointmentTime], [DayName], [DoctorId], [EndTime], [StartTime], [WaitingPeriod])
+OUTPUT INSERTED.[DayId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-10-14 10:44:35.229 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 10:44:35.232 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 10:44:35.234 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 10:44:35.235 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 10:44:35.235 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 10:44:35.235 +03:00 [INF] Executed action Project.Controllers.DayController.Add (Project) in 66.8746ms
+2024-10-14 10:44:35.235 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Add (Project)'
+2024-10-14 10:44:35.235 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 75.6210 ms
+2024-10-14 10:44:35.235 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7059/Day/Add - 302 0 null 77.1024ms
+2024-10-14 10:44:35.239 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 10:44:35.240 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:44:35.240 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:35.242 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 10:44:35.242 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 10:44:35.242 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 10:44:35.243 +03:00 [INF] Executed ViewResult - view Index executed in 0.4972ms.
+2024-10-14 10:44:35.243 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 2.5352ms
+2024-10-14 10:44:35.243 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 10:44:35.243 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 2.7202 ms
+2024-10-14 10:44:35.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 3.8177ms
+2024-10-14 10:44:35.272 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:44:35.272 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:44:35.272 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2124ms
+2024-10-14 10:44:35.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.3388ms
+2024-10-14 10:44:41.335 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=32 - null null
+2024-10-14 10:44:41.337 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 10:44:41.337 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 10:44:41.340 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-14 10:44:41.340 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-14 10:44:41.341 +03:00 [INF] Executed ViewResult - view Details executed in 1.0954ms.
+2024-10-14 10:44:41.341 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 4.3273ms
+2024-10-14 10:44:41.341 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 10:44:41.341 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 4.6860 ms
+2024-10-14 10:44:41.342 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=32 - 200 null text/html; charset=utf-8 6.1618ms
+2024-10-14 10:44:41.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 10:44:41.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 10:44:41.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2009ms
+2024-10-14 10:44:41.365 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.3896ms
+2024-10-14 17:01:17.052 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-14 17:01:17.160 +03:00 [INF] Now listening on: https://localhost:7059
+2024-10-14 17:01:17.161 +03:00 [INF] Now listening on: http://localhost:5178
+2024-10-14 17:01:17.187 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-14 17:01:17.187 +03:00 [INF] Hosting environment: Development
+2024-10-14 17:01:17.187 +03:00 [INF] Content root path: C:\Users\user\Documents\doctoriaa
+2024-10-14 17:01:17.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/ - null null
+2024-10-14 17:01:17.720 +03:00 [INF] Executing endpoint 'Project.Controllers.HomeController.Index (Project)'
+2024-10-14 17:01:17.740 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.HomeController (Project).
+2024-10-14 17:01:17.748 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 17:01:17.810 +03:00 [INF] Executed ViewResult - view Index executed in 62.3971ms.
+2024-10-14 17:01:17.819 +03:00 [INF] Executed action Project.Controllers.HomeController.Index (Project) in 78.7271ms
+2024-10-14 17:01:17.820 +03:00 [INF] Executed endpoint 'Project.Controllers.HomeController.Index (Project)'
+2024-10-14 17:01:17.822 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 119.6318 ms
+2024-10-14 17:01:17.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/ - 200 null text/html; charset=utf-8 210.9432ms
+2024-10-14 17:01:17.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 17:01:17.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 17:01:17.884 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 10.1708ms
+2024-10-14 17:01:17.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.3089ms
+2024-10-14 17:01:23.458 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/doctor - null null
+2024-10-14 17:01:23.463 +03:00 [INF] Executing endpoint 'Project.Controllers.DoctorController.Index (Project)'
+2024-10-14 17:01:23.465 +03:00 [INF] Route matched with {action = "Index", controller = "Doctor"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DoctorController (Project).
+2024-10-14 17:01:23.466 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 17:01:23.470 +03:00 [INF] Executed ViewResult - view Index executed in 5.1525ms.
+2024-10-14 17:01:23.470 +03:00 [INF] Executed action Project.Controllers.DoctorController.Index (Project) in 5.7468ms
+2024-10-14 17:01:23.471 +03:00 [INF] Executed endpoint 'Project.Controllers.DoctorController.Index (Project)'
+2024-10-14 17:01:23.471 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 8.2337 ms
+2024-10-14 17:01:23.471 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/doctor - 200 null text/html; charset=utf-8 13.3766ms
+2024-10-14 17:01:23.532 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 17:01:23.532 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 17:01:23.532 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.604ms
+2024-10-14 17:01:23.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.91ms
+2024-10-14 17:01:26.973 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-14 17:01:26.980 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 17:01:26.982 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 17:01:27.968 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 17:01:28.071 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 17:01:28.128 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 17:01:28.156 +03:00 [INF] Executed ViewResult - view Index executed in 28.653ms.
+2024-10-14 17:01:28.156 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 1173.5621ms
+2024-10-14 17:01:28.156 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 17:01:28.156 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 1177.1701 ms
+2024-10-14 17:01:28.163 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 null text/html; charset=utf-8 1189.3007ms
+2024-10-14 17:01:28.206 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 17:01:28.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.4682ms
+2024-10-14 17:01:28.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 17:01:28.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.5837ms
+2024-10-14 17:01:45.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/dkl;alkakd - null null
+2024-10-14 17:01:45.860 +03:00 [INF] Executing endpoint 'Project.Controllers.HomeController.Statuscode (Project)'
+2024-10-14 17:01:45.867 +03:00 [INF] Route matched with {action = "Statuscode", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Statuscode(Int32) on controller Project.Controllers.HomeController (Project).
+2024-10-14 17:01:45.875 +03:00 [INF] Executing ViewResult, running view 404.
+2024-10-14 17:01:45.881 +03:00 [INF] Executed ViewResult - view 404 executed in 5.9614ms.
+2024-10-14 17:01:45.881 +03:00 [INF] Executed action Project.Controllers.HomeController.Statuscode (Project) in 13.9966ms
+2024-10-14 17:01:45.881 +03:00 [INF] Executed endpoint 'Project.Controllers.HomeController.Statuscode (Project)'
+2024-10-14 17:01:45.881 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 404 in 25.2310 ms
+2024-10-14 17:01:45.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/dkl;alkakd - 404 null text/html; charset=utf-8 28.0021ms
+2024-10-14 17:01:45.882 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7059/dkl;alkakd, Response status code: 404
+2024-10-14 17:01:45.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/assets/css/404.css - null null
+2024-10-14 17:01:45.920 +03:00 [INF] The file /assets/css/404.css was not modified
+2024-10-14 17:01:45.921 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 304 in 5.7837 ms
+2024-10-14 17:01:45.921 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/assets/css/404.css - 304 null text/css 6.5786ms
+2024-10-14 22:33:37.025 +03:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-14 22:33:37.191 +03:00 [INF] Now listening on: https://localhost:7059
+2024-10-14 22:33:37.192 +03:00 [INF] Now listening on: http://localhost:5178
+2024-10-14 22:33:37.219 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-14 22:33:37.220 +03:00 [INF] Hosting environment: Development
+2024-10-14 22:33:37.220 +03:00 [INF] Content root path: C:\Users\user\Documents\doctoriaa
+2024-10-14 22:33:37.676 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/ - null null
+2024-10-14 22:33:37.816 +03:00 [INF] Executing endpoint 'Project.Controllers.HomeController.Index (Project)'
+2024-10-14 22:33:37.837 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.HomeController (Project).
+2024-10-14 22:33:37.848 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:33:37.891 +03:00 [INF] Executed ViewResult - view Index executed in 46.7703ms.
+2024-10-14 22:33:37.896 +03:00 [INF] Executed action Project.Controllers.HomeController.Index (Project) in 58.2651ms
+2024-10-14 22:33:37.897 +03:00 [INF] Executed endpoint 'Project.Controllers.HomeController.Index (Project)'
+2024-10-14 22:33:37.898 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 97.3306 ms
+2024-10-14 22:33:37.903 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/ - 200 null text/html; charset=utf-8 228.6731ms
+2024-10-14 22:33:37.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:33:37.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 4.4322ms
+2024-10-14 22:33:37.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:33:37.973 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.1796ms
+2024-10-14 22:34:00.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-14 22:34:00.583 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:34:00.585 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:34:01.668 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:34:01.768 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:34:01.810 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:34:01.834 +03:00 [INF] Executed ViewResult - view Index executed in 24.5337ms.
+2024-10-14 22:34:01.835 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 1249.426ms
+2024-10-14 22:34:01.835 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:34:01.835 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 1252.8644 ms
+2024-10-14 22:34:01.840 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 null text/html; charset=utf-8 1263.0237ms
+2024-10-14 22:34:01.894 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/kjsklfjklfsjfs - null null
+2024-10-14 22:34:01.898 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:34:01.898 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:34:01.899 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 1.4862ms
+2024-10-14 22:34:01.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.7954ms
+2024-10-14 22:34:01.909 +03:00 [INF] Executing endpoint 'Project.Controllers.HomeController.Statuscode (Project)'
+2024-10-14 22:34:01.916 +03:00 [INF] Route matched with {action = "Statuscode", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Statuscode(Int32) on controller Project.Controllers.HomeController (Project).
+2024-10-14 22:34:01.927 +03:00 [INF] Executing ViewResult, running view 404.
+2024-10-14 22:34:01.933 +03:00 [INF] Executed ViewResult - view 404 executed in 6.07ms.
+2024-10-14 22:34:01.933 +03:00 [INF] Executed action Project.Controllers.HomeController.Statuscode (Project) in 16.4881ms
+2024-10-14 22:34:01.933 +03:00 [INF] Executed endpoint 'Project.Controllers.HomeController.Statuscode (Project)'
+2024-10-14 22:34:01.934 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 404 in 31.1459 ms
+2024-10-14 22:34:01.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/kjsklfjklfsjfs - 404 null text/html; charset=utf-8 40.6614ms
+2024-10-14 22:34:01.935 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7059/kjsklfjklfsjfs, Response status code: 404
+2024-10-14 22:34:06.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/day - null null
+2024-10-14 22:34:06.612 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:34:06.613 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:34:06.636 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:34:06.638 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:34:06.638 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:34:06.640 +03:00 [INF] Executed ViewResult - view Index executed in 1.6214ms.
+2024-10-14 22:34:06.640 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 27.1404ms
+2024-10-14 22:34:06.640 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:34:06.640 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 27.7225 ms
+2024-10-14 22:34:06.641 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/day - 200 null text/html; charset=utf-8 31.4732ms
+2024-10-14 22:34:06.709 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:34:06.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:34:06.710 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.3335ms
+2024-10-14 22:34:06.713 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.1622ms
+2024-10-14 22:34:18.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=32 - null null
+2024-10-14 22:34:18.420 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 22:34:18.423 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:34:18.515 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-14 22:34:18.524 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-14 22:34:18.532 +03:00 [INF] Executed ViewResult - view Details executed in 8.2353ms.
+2024-10-14 22:34:18.532 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 109.5468ms
+2024-10-14 22:34:18.532 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 22:34:18.532 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 112.7291 ms
+2024-10-14 22:34:18.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=32 - 200 null text/html; charset=utf-8 114.7734ms
+2024-10-14 22:34:18.563 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:34:18.563 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:34:18.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.6455ms
+2024-10-14 22:34:18.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.6027ms
+2024-10-14 22:34:26.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/BlockOutHours/Delete?HourId=35&DayId=32 - null null
+2024-10-14 22:34:26.122 +03:00 [INF] Executing endpoint 'Project.Controllers.BlockOutHoursController.Delete (Project)'
+2024-10-14 22:34:26.127 +03:00 [INF] Route matched with {action = "Delete", controller = "BlockOutHours"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32, Int32) on controller Project.Controllers.BlockOutHoursController (Project).
+2024-10-14 22:34:26.138 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__HourId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM [BlockOutHours] AS [b]
+WHERE [b].[BlockOutHoursId] = @__HourId_0
+2024-10-14 22:34:26.206 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+2024-10-14 22:34:26.212 +03:00 [INF] Executing RedirectResult, redirecting to /Day/Details?DayId=32.
+2024-10-14 22:34:26.215 +03:00 [INF] Executed action Project.Controllers.BlockOutHoursController.Delete (Project) in 87.8739ms
+2024-10-14 22:34:26.215 +03:00 [INF] Executed endpoint 'Project.Controllers.BlockOutHoursController.Delete (Project)'
+2024-10-14 22:34:26.215 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 93.4136 ms
+2024-10-14 22:34:26.215 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/BlockOutHours/Delete?HourId=35&DayId=32 - 302 0 null 96.6137ms
+2024-10-14 22:34:26.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details?DayId=32 - null null
+2024-10-14 22:34:26.228 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 22:34:26.228 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:34:26.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-14 22:34:26.234 +03:00 [INF] Executing ViewResult, running view Details.
+2024-10-14 22:34:26.240 +03:00 [INF] Executed ViewResult - view Details executed in 6.4811ms.
+2024-10-14 22:34:26.240 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 12.4567ms
+2024-10-14 22:34:26.241 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 22:34:26.241 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 13.5919 ms
+2024-10-14 22:34:26.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details?DayId=32 - 200 null text/html; charset=utf-8 18.7754ms
+2024-10-14 22:34:26.272 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:34:26.272 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:34:26.272 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.3084ms
+2024-10-14 22:34:26.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.3133ms
+2024-10-14 22:35:08.019 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Details - null null
+2024-10-14 22:35:08.021 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 22:35:08.021 +03:00 [INF] Route matched with {action = "Details", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:35:08.035 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime]
+FROM (
+    SELECT TOP(2) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+ORDER BY [t].[DayId]
+2024-10-14 22:35:08.036 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 22:35:08.036 +03:00 [INF] Executed action Project.Controllers.DayController.Details (Project) in 14.882ms
+2024-10-14 22:35:08.036 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Details (Project)'
+2024-10-14 22:35:08.036 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 15.1698 ms
+2024-10-14 22:35:08.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Details - 302 0 null 16.9561ms
+2024-10-14 22:35:08.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:35:08.043 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:35:08.043 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:35:08.046 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:35:08.049 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:35:08.049 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:35:08.051 +03:00 [INF] Executed ViewResult - view Index executed in 1.7385ms.
+2024-10-14 22:35:08.051 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 8.147ms
+2024-10-14 22:35:08.051 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:35:08.051 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 8.4220 ms
+2024-10-14 22:35:08.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 10.1538ms
+2024-10-14 22:35:08.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:35:08.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:35:08.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.4203ms
+2024-10-14 22:35:08.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.529ms
+2024-10-14 22:35:26.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Create - null null
+2024-10-14 22:35:26.870 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-14 22:35:26.872 +03:00 [INF] Route matched with {action = "Create", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:35:26.873 +03:00 [INF] Executing ViewResult, running view Create.
+2024-10-14 22:35:26.887 +03:00 [INF] Executed ViewResult - view Create executed in 15.1036ms.
+2024-10-14 22:35:26.888 +03:00 [INF] Executed action Project.Controllers.DayController.Create (Project) in 15.758ms
+2024-10-14 22:35:26.888 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Create (Project)'
+2024-10-14 22:35:26.888 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 18.2594 ms
+2024-10-14 22:35:26.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Create - 200 null text/html; charset=utf-8 19.6496ms
+2024-10-14 22:35:26.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:35:26.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:35:26.915 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2928ms
+2024-10-14 22:35:26.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.62ms
+2024-10-14 22:36:08.648 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7059/Day/Add - application/x-www-form-urlencoded 884
+2024-10-14 22:36:08.654 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Add (Project)'
+2024-10-14 22:36:08.663 +03:00 [INF] Route matched with {action = "Add", controller = "Day"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Project.ViewModels.DayViewModel) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:36:08.697 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:36:08.739 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Time), @p4='?' (DbType = Time), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Days] ([AppointmentTime], [DayName], [DoctorId], [EndTime], [StartTime], [WaitingPeriod])
+OUTPUT INSERTED.[DayId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-10-14 22:36:08.755 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 22:36:08.758 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 22:36:08.762 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Time), @p4='?' (DbType = Time), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Days] ([AppointmentTime], [DayName], [DoctorId], [EndTime], [StartTime], [WaitingPeriod])
+OUTPUT INSERTED.[DayId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-10-14 22:36:08.763 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 22:36:08.765 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Time), @p2='?' (DbType = Time)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BlockOutHours] ([DayId], [EndTime], [StartTime])
+OUTPUT INSERTED.[BlockOutHoursId]
+VALUES (@p0, @p1, @p2);
+2024-10-14 22:36:08.766 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 22:36:08.766 +03:00 [INF] Executed action Project.Controllers.DayController.Add (Project) in 103.3131ms
+2024-10-14 22:36:08.766 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Add (Project)'
+2024-10-14 22:36:08.766 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 111.9827 ms
+2024-10-14 22:36:08.766 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7059/Day/Add - 302 0 null 117.9392ms
+2024-10-14 22:36:08.773 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:36:08.774 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:36:08.774 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:36:08.776 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:36:08.778 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:36:08.778 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:36:08.779 +03:00 [INF] Executed ViewResult - view Index executed in 0.6282ms.
+2024-10-14 22:36:08.779 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 4.8944ms
+2024-10-14 22:36:08.779 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:36:08.779 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 5.1531 ms
+2024-10-14 22:36:08.779 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 6.3532ms
+2024-10-14 22:36:08.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:36:08.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:36:08.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 1.5721ms
+2024-10-14 22:36:08.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.4292ms
+2024-10-14 22:37:05.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Delete?DayId=33 - null null
+2024-10-14 22:37:05.648 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 22:37:05.650 +03:00 [INF] Route matched with {action = "Delete", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:37:05.668 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2024-10-14 22:37:05.681 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime], [b0].[BookingId], [b0].[CancelReasons], [b0].[CanceledBy], [b0].[Date], [b0].[DayId], [b0].[InsuranceId], [b0].[Status], [b0].[Time], [b0].[UserId]
+FROM (
+    SELECT TOP(1) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+LEFT JOIN [Bookings] AS [b0] ON [t].[DayId] = [b0].[DayId]
+ORDER BY [t].[DayId], [b].[BlockOutHoursId]
+2024-10-14 22:37:05.705 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p1;
+DELETE FROM [Days]
+OUTPUT 1
+WHERE [DayId] = @p2;
+2024-10-14 22:37:05.711 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 22:37:05.711 +03:00 [INF] Executed action Project.Controllers.DayController.Delete (Project) in 61.0313ms
+2024-10-14 22:37:05.711 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 22:37:05.711 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 63.6065 ms
+2024-10-14 22:37:05.711 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Delete?DayId=33 - 302 0 null 67.5752ms
+2024-10-14 22:37:05.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:37:05.719 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:37:05.719 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:37:05.722 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:37:05.725 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:37:05.727 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:37:05.730 +03:00 [INF] Executed ViewResult - view Index executed in 3.1012ms.
+2024-10-14 22:37:05.730 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 11.2628ms
+2024-10-14 22:37:05.730 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:37:05.731 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 11.5421 ms
+2024-10-14 22:37:05.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 12.6738ms
+2024-10-14 22:37:05.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:37:05.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:37:05.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.4117ms
+2024-10-14 22:37:05.766 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.9963ms
+2024-10-14 22:43:02.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:43:02.266 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:02.266 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:43:02.282 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:43:02.284 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:43:02.285 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:43:02.286 +03:00 [INF] Executed ViewResult - view Index executed in 0.9028ms.
+2024-10-14 22:43:02.286 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 19.4647ms
+2024-10-14 22:43:02.286 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:02.286 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 19.7925 ms
+2024-10-14 22:43:02.286 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 26.1194ms
+2024-10-14 22:43:02.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:43:02.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:43:02.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 1.1092ms
+2024-10-14 22:43:02.331 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.4551ms
+2024-10-14 22:43:04.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Delete?DayId=32 - null null
+2024-10-14 22:43:04.777 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 22:43:04.777 +03:00 [INF] Route matched with {action = "Delete", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:43:04.785 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime], [b0].[BookingId], [b0].[CancelReasons], [b0].[CanceledBy], [b0].[Date], [b0].[DayId], [b0].[InsuranceId], [b0].[Status], [b0].[Time], [b0].[UserId]
+FROM (
+    SELECT TOP(1) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+LEFT JOIN [Bookings] AS [b0] ON [t].[DayId] = [b0].[DayId]
+ORDER BY [t].[DayId], [b].[BlockOutHoursId]
+2024-10-14 22:43:04.798 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p1;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p2;
+DELETE FROM [Days]
+OUTPUT 1
+WHERE [DayId] = @p3;
+2024-10-14 22:43:04.799 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 22:43:04.799 +03:00 [INF] Executed action Project.Controllers.DayController.Delete (Project) in 21.9686ms
+2024-10-14 22:43:04.799 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 22:43:04.799 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 22.3011 ms
+2024-10-14 22:43:04.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Delete?DayId=32 - 302 0 null 23.9288ms
+2024-10-14 22:43:04.805 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:43:04.806 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:04.807 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:43:04.808 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:43:04.808 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:43:04.809 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:43:04.809 +03:00 [INF] Executed ViewResult - view Index executed in 0.7697ms.
+2024-10-14 22:43:04.809 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 2.892ms
+2024-10-14 22:43:04.810 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:04.810 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 3.1052 ms
+2024-10-14 22:43:04.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 4.2133ms
+2024-10-14 22:43:04.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:43:04.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:43:04.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.3433ms
+2024-10-14 22:43:04.837 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.039ms
+2024-10-14 22:43:06.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day/Delete?DayId=34 - null null
+2024-10-14 22:43:06.161 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 22:43:06.161 +03:00 [INF] Route matched with {action = "Delete", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller Project.Controllers.DayController (Project).
+2024-10-14 22:43:06.164 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__DayId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DayId], [t].[AppointmentTime], [t].[DayName], [t].[DoctorId], [t].[EndTime], [t].[StartTime], [t].[WaitingPeriod], [b].[BlockOutHoursId], [b].[DayId], [b].[EndTime], [b].[StartTime], [b0].[BookingId], [b0].[CancelReasons], [b0].[CanceledBy], [b0].[Date], [b0].[DayId], [b0].[InsuranceId], [b0].[Status], [b0].[Time], [b0].[UserId]
+FROM (
+    SELECT TOP(1) [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+    FROM [Days] AS [d]
+    WHERE [d].[DayId] = @__DayId_0
+) AS [t]
+LEFT JOIN [BlockOutHours] AS [b] ON [t].[DayId] = [b].[DayId]
+LEFT JOIN [Bookings] AS [b0] ON [t].[DayId] = [b0].[DayId]
+ORDER BY [t].[DayId], [b].[BlockOutHoursId]
+2024-10-14 22:43:06.176 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p0;
+DELETE FROM [BlockOutHours]
+OUTPUT 1
+WHERE [BlockOutHoursId] = @p1;
+DELETE FROM [Days]
+OUTPUT 1
+WHERE [DayId] = @p2;
+2024-10-14 22:43:06.177 +03:00 [INF] Executing RedirectResult, redirecting to /Day.
+2024-10-14 22:43:06.177 +03:00 [INF] Executed action Project.Controllers.DayController.Delete (Project) in 15.7272ms
+2024-10-14 22:43:06.177 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Delete (Project)'
+2024-10-14 22:43:06.177 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 302 in 16.0326 ms
+2024-10-14 22:43:06.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day/Delete?DayId=34 - 302 0 null 17.2871ms
+2024-10-14 22:43:06.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:43:06.183 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:06.183 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:43:06.184 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:43:06.185 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:43:06.185 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:43:06.186 +03:00 [INF] Executed ViewResult - view Index executed in 0.4579ms.
+2024-10-14 22:43:06.186 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 2.9616ms
+2024-10-14 22:43:06.186 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:06.186 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 3.2110 ms
+2024-10-14 22:43:06.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 4.5473ms
+2024-10-14 22:43:06.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:43:06.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:43:06.218 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.2283ms
+2024-10-14 22:43:06.221 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.7437ms
+2024-10-14 22:43:10.199 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/Day - null null
+2024-10-14 22:43:10.200 +03:00 [INF] Executing endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:10.200 +03:00 [INF] Route matched with {action = "Index", controller = "Day"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Project.Controllers.DayController (Project).
+2024-10-14 22:43:10.203 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[DoctorId], [d].[Bio], [d].[ClinicId], [d].[SpecializationId], [d].[UserId]
+FROM [Doctors] AS [d]
+WHERE [d].[DoctorId] = 5
+2024-10-14 22:43:10.204 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__entity_equality_doctor_0_DoctorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DayId], [d].[AppointmentTime], [d].[DayName], [d].[DoctorId], [d].[EndTime], [d].[StartTime], [d].[WaitingPeriod]
+FROM [Days] AS [d]
+INNER JOIN [Doctors] AS [d0] ON [d].[DoctorId] = [d0].[DoctorId]
+WHERE [d0].[DoctorId] = @__entity_equality_doctor_0_DoctorId
+2024-10-14 22:43:10.204 +03:00 [INF] Executing ViewResult, running view Index.
+2024-10-14 22:43:10.205 +03:00 [INF] Executed ViewResult - view Index executed in 0.507ms.
+2024-10-14 22:43:10.205 +03:00 [INF] Executed action Project.Controllers.DayController.Index (Project) in 4.5581ms
+2024-10-14 22:43:10.205 +03:00 [INF] Executed endpoint 'Project.Controllers.DayController.Index (Project)'
+2024-10-14 22:43:10.205 +03:00 [INF] Request Completed {Protocol} {Method} {Url} - 200 in 4.8582 ms
+2024-10-14 22:43:10.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/Day - 200 null text/html; charset=utf-8 6.3789ms
+2024-10-14 22:43:10.230 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_vs/browserLink - null null
+2024-10-14 22:43:10.230 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-14 22:43:10.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 0.205ms
+2024-10-14 22:43:10.232 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7059/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2.4918ms
