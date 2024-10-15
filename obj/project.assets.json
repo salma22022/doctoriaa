@@ -12732,11 +12732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\doctoriaa\\Project.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\Mobadrh\\doctoriaa\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Users\\user\\Documents\\doctoriaa\\Project.csproj",
+      "projectPath": "C:\\Users\\user\\Documents\\Mobadrh\\doctoriaa\\Project.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Documents\\doctoriaa\\obj\\",
+      "outputPath": "C:\\Users\\user\\Documents\\Mobadrh\\doctoriaa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
