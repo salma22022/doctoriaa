@@ -444,3 +444,6 @@ C:\Users\user\Documents\Mobadrh\doctoriaa\obj\Debug\net8.0\refint\Project.dll
 C:\Users\user\Documents\Mobadrh\doctoriaa\obj\Debug\net8.0\Project.pdb
 C:\Users\user\Documents\Mobadrh\doctoriaa\obj\Debug\net8.0\Project.genruntimeconfig.cache
 C:\Users\user\Documents\Mobadrh\doctoriaa\obj\Debug\net8.0\ref\Project.dll
+D:\doctoriaa\obj\Debug\net8.0\Project.dll
+D:\doctoriaa\obj\Debug\net8.0\refint\Project.dll
+D:\doctoriaa\obj\Debug\net8.0\Project.pdb

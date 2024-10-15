@@ -1,7 +1,11 @@
 using Project.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-namespace Project
+using Project.Models;
+using Microsoft.EntityFrameworkCore;
+using Doctoriaa.Services;
+
+namespace  Doctoriaa
 {
     public class Program
     {
@@ -12,6 +16,8 @@ namespace Project
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<VeseetaDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Local")));
+            builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             builder.Services.AddIdentity<User, IdentityRole>(options =>
             {
