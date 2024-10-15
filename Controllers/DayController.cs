@@ -44,8 +44,23 @@ namespace Project.Controllers
         }
 
         [HttpGet]
-        public ActionResult Create() { 
-            return View();
+        public ActionResult Create() {
+            var docId = _userManager.GetUserId(User);
+            var doctor = context.Doctors.FirstOrDefault(d => d.UserId == docId);
+            var Days = context.Days
+            .Where(day => day.Doc == doctor).ToList();
+
+            var allDaysOfWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+            // Filter out the selected days
+            if (Days != null && Days.Any())
+            {
+                allDaysOfWeek = allDaysOfWeek.Except(Days.Select(d => d.DayName)).ToList();
+            }
+
+            var Dayview = new DayViewModel();
+            var tuble = Tuple.Create(Dayview, allDaysOfWeek);
+            return View(tuble);
         }
 
         [HttpPost]

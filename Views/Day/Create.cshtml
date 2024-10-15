@@ -1,73 +1,127 @@
-﻿@model DayViewModel
-
+﻿@model Tuple<DayViewModel,List<String>>
 @{
     ViewData["Title"] = "Add Day";
 }
 
-<form asp-action="Add" method="post">
-    <div id="days-container">
-        <!-- Template for adding new days dynamically -->
+<form asp-action="Add" method="post" class="d-flex justify-content-center align-items-center flex-column">
+    <div id="days-container" class="w-50">
         <div class="day-item">
             <h4>Day Details</h4>
-            <input type="text" name="Days[0].DayName" placeholder="Day Name" required />
-            <input type="time" name="Days[0].StartTime" required />
-            <input type="time" name="Days[0].EndTime" required />
-            <input type="time" name="Days[0].AppointmentTime" required />
-            <input type="text" name="Days[0].WaitingPeriod" placeholder="Waiting Period" required />
+            <div class="form-group">
+                <label class="form-label">Day Name</label>
+                <select name="Days[0].DayName" class="form-control day-select" required>
+                    <option value="">Select Day</option>
+                    @foreach(var day in Model.Item2)
+                    {
+                        <option value="@day">@day</option>
 
-             <!-- BlockOutHours for each day -->
-             <div class="blockout-hours">
-                 <h5>BlockOut Hours</h5>
-                 <input type="time" name="Days[0].BlockOutHours[0].StartTime" placeholder="Start Time" required />
-                 <input type="time" name="Days[0].BlockOutHours[0].EndTime" placeholder="End Time" required />
-                 <button type="button" onclick="addBlockOutHour(this)">Add More BlockOut Hour</button>
-             </div> 
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Start Time</label>
+                <input type="time" name="Days[0].StartTime" required class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">End Time</label>
+                <input type="time" name="Days[0].EndTime" required class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Appointment Time</label>
+                <input type="time" name="Days[0].AppointmentTime" required class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Waiting Period</label>
+                <input type="text" name="Days[0].WaitingPeriod" placeholder="Waiting Period" required class="form-control" />
+            </div>
+
+            <div class="blockout-hours">
+                <h5>BlockOut Hours</h5>
+                <div class="form-group">
+                    <label class="form-label">Start Hour</label>
+                    <input type="time" name="Days[0].BlockOutHours[0].StartTime" placeholder="Start Time" required class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">End Hour</label>
+                    <input type="time" name="Days[0].BlockOutHours[0].EndTime" placeholder="End Time" required class="form-control" />
+                </div>
+            </div>
         </div>
     </div>
-    <button type="button" onclick="addDay()">Add More Day</button>
-    <input type="submit" value="Submit" />
+    <div class="mt-3 mb-3">
+        @* <button type="button" onclick="addDay()" id="daybtn" class="btn btn-primary">Add More Day</button> *@
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
 </form>
 
 <script>
-    // Add more days
+    // List of days of the week
+    var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
     function addDay() {
         var dayCount = document.querySelectorAll('.day-item').length;
         var container = document.getElementById('days-container');
+        var dayButton = document.getElementById("daybtn");
+        if (dayCount < 7) {
+            var availableDays = daysOfWeek.map(function (day) {
+                return `<option value="${day}">${day}</option>`;
+            }).join('');
 
-        var dayTemplate = `
-            <div class="day-item">
-                <h4>Day Details</h4>
-                <input type="text" name="Days[${dayCount}].DayName" placeholder="Day Name" required />
-                <input type="time" name="Days[${dayCount}].StartTime" required />
-                <input type="time" name="Days[${dayCount}].EndTime" required />
-                <input type="time" name="Days[${dayCount}].AppointmentTime" required />
+            var dayTemplate = `
+                    <div class="day-item">
+                        <h4>Day Details</h4>
+                        <div class="form-group">
+                            <label class="form-label">Day Name</label>
+                            <select name="Days[${dayCount}].DayName" class="form-control day-select" required>
+                                <option value="">Select Day</option>
+                                ${availableDays}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Start Time</label>
+                            <input type="time" name="Days[${dayCount}].StartTime" required class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">End Time</label>
+                            <input type="time" name="Days[${dayCount}].EndTime" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Appointment Time</label>
+                            <input type="time" name="Days[${dayCount}].AppointmentTime" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Waiting Period</label>
+                            <input type="text" name="Days[${dayCount}].WaitingPeriod" placeholder="Waiting Period" required class="form-control" />
+                        </div>
 
-                <input type="text" name="Days[${dayCount}].WaitingPeriod" placeholder="Waiting Period" required />
+                        <div class="blockout-hours">
+                            <h5>BlockOut Hours</h5>
+                            <div class="form-group">
+                                <label class="form-label">Start Hour</label>
+                                <input type="time" name="Days[${dayCount}].BlockOutHours[0].StartTime" placeholder="Start Time" required class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">End Hour</label>
+                                <input type="time" name="Days[${dayCount}].BlockOutHours[0].EndTime" placeholder="End Time" required class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                `;
 
-                <div class="blockout-hours">
-                    <h5>BlockOut Hours</h5>
-                    <input type="time" name="Days[${dayCount}].BlockOutHours[0].StartTime" placeholder="Start Time" required />
-                    <input type="time" name="Days[${dayCount}].BlockOutHours[0].EndTime" placeholder="End Time" required />
-                    <button type="button" onclick="addBlockOutHour(this)">Add More BlockOut Hour</button>
-                </div>
-            </div>
-        `;
+            container.insertAdjacentHTML('beforeend', dayTemplate);
 
-        container.insertAdjacentHTML('beforeend', dayTemplate);
-    }
-
-    // Add more BlockOut hours for a day
-    function addBlockOutHour(button) {
-        var blockOutHourContainer = button.closest('.blockout-hours');
-        var blockOutCount = blockOutHourContainer.querySelectorAll('input').length / 2;
-
-        var blockOutTemplate = `
-            <div>
-                <input type="time" name="${button.closest('.day-item').querySelector('input').name.replace('DayName', 'BlockOutHours['+blockOutCount+'].StartTime')}" placeholder="Start Time" required />
-                <input type="time" name="${button.closest('.day-item').querySelector('input').name.replace('DayName', 'BlockOutHours['+blockOutCount+'].EndTime')}" placeholder="End Time" required />
-            </div>
-        `;
-
-        blockOutHourContainer.insertAdjacentHTML('beforeend', blockOutTemplate);
+            // Remove the selected day from the options
+            var daySelect = document.querySelector(`select[name="Days[${dayCount}].DayName"]`);
+            daySelect.addEventListener('change', function () {
+                var selectedDay = this.value;
+                daysOfWeek = daysOfWeek.filter(function (day) {
+                    return day !== selectedDay;
+                });
+                // Disable the button when all days are added
+                if (dayCount >= 6) {
+                    dayButton.disabled = true;
+                }
+            });
+        }
     }
 </script>
