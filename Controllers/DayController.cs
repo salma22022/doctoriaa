@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -8,13 +9,14 @@ using Project.ViewModels;
 
 namespace Project.Controllers
 {
+    [Authorize(Roles = "Doctor")]
     public class DayController : Controller
     {
         private readonly VeseetaDBContext context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
 
         IDayRepository dayRepository;
-        public DayController(VeseetaDBContext context, UserManager<IdentityUser> userManager, IDayRepository dayRepository)
+        public DayController(VeseetaDBContext context, UserManager<User> userManager, IDayRepository dayRepository)
         {
             this.context = context;
             this._userManager = userManager;
@@ -25,18 +27,20 @@ namespace Project.Controllers
         public IActionResult Index()
         {
             var docId = _userManager.GetUserId(User);
+            Console.WriteLine(docId);
 
-            //if(docId == null)
-            //    return View("404");
-            //var doctor = context.Doctors.FirstOrDefault(d => d.DoctorId == 5);
-
-            //var Days = context.Days
-                //.Where(day => day.Doc == doctor).ToList();
+            if (docId == null)
+                return View("404");
+            var doctor = context.Doctors.FirstOrDefault(d => d.UserId == docId);
+            Console.WriteLine(doctor);
+            var Days = context.Days
+            .Where(day => day.Doc == doctor).ToList();
+            //Console.WriteLine(Days[0]?.Doc.DoctorId);
             ViewBag.message = TempData["Message"];
 
-            //if(Days != null)
-                //return View(Days);
-            return View();
+            if (Days != null)
+                return View(Days);
+            return View(Days);
         }
 
         [HttpGet]
@@ -49,7 +53,10 @@ namespace Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                //var doctor = context.Doctors.FirstOrDefault(d => d.DoctorId == 5);
+                var docId = _userManager.GetUserId(User);
+           
+                var doctor = context.Doctors.FirstOrDefault(d => d.UserId == docId);
+               
                 foreach (var day in d.Days)
                 {
                     var newDay = new Day
@@ -59,7 +66,7 @@ namespace Project.Controllers
                         EndTime = day.EndTime,
                         WaitingPeriod = day.WaitingPeriod,
                         AppointmentTime = day.AppointmentTime,
-                        //Doc = doctor,
+                        Doc = doctor,
                     };
 
                     //context.Days.Add(newDay);

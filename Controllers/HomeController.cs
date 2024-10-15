@@ -22,6 +22,8 @@ namespace Project.Controllers
             }
             return View("Error");
         }
+
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();

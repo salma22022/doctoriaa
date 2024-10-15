@@ -21,7 +21,7 @@ namespace Project
 
             builder.Host.UseSerilog();
 
-            builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<VeseetaDBContext>();
+            //builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<VeseetaDBContext>();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<VeseetaDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Local")));

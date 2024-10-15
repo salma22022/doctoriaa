@@ -29,5 +29,9 @@ namespace Project.Models
         public virtual ICollection<Day> Days { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
 
+        public override string ToString()
+        {
+            return $"{DoctorId} - {UserId} ";
+        }
     }
 }
