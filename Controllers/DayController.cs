@@ -28,14 +28,14 @@ namespace Project.Controllers
 
             //if(docId == null)
             //    return View("404");
-            var doctor = context.Doctors.FirstOrDefault(d => d.DoctorId == 5);
+            //var doctor = context.Doctors.FirstOrDefault(d => d.DoctorId == 5);
 
-            var Days = context.Days
-                .Where(day => day.Doc == doctor).ToList();
+            //var Days = context.Days
+                //.Where(day => day.Doc == doctor).ToList();
             ViewBag.message = TempData["Message"];
 
-            if(Days != null)
-                return View(Days);
+            //if(Days != null)
+                //return View(Days);
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                var doctor = context.Doctors.FirstOrDefault(d => d.DoctorId == 5);
+                //var doctor = context.Doctors.FirstOrDefault(d => d.DoctorId == 5);
                 foreach (var day in d.Days)
                 {
                     var newDay = new Day
@@ -59,7 +59,7 @@ namespace Project.Controllers
                         EndTime = day.EndTime,
                         WaitingPeriod = day.WaitingPeriod,
                         AppointmentTime = day.AppointmentTime,
-                        Doc = doctor,
+                        //Doc = doctor,
                     };
 
                     //context.Days.Add(newDay);

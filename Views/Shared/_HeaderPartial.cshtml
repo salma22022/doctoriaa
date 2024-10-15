@@ -1,0 +1,58 @@
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<User> SignInManager;
+@inject UserManager<User> UserManager;
+
+<header id="header" class="header sticky-top">
+
+    <div class="branding d-flex align-items-center">
+
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Doctoria</h1>
+            </a>
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+                var loggedUser = await UserManager.GetUserAsync(User);
+                var isDoctor = await UserManager.IsInRoleAsync(loggedUser, "Doctor");
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                    @if (isDoctor)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Days</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Profile</a>
+                        </li>
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
+                    </li>
+                    </ul>
+                </nav>
+            }
+            else
+            {
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li>
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Register</a>
+                        </li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+                <a class="cta-btn d-none d-sm-block" asp-controller="DoctorAccount" asp-action="Login">Are you a Doctor ?</a>
+            }
+
+        </div>
+
+    </div>
+
+</header>

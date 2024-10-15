@@ -1,15 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Project.Models
 {
     public class Doctor
     {
         // [Key]
-        public int DoctorId { get; set; } // Primary Key
+        public string DoctorId { get; set; } // Primary Key
         public string Bio { get; set; }
+        public string LicenseNumber { get; set; }
+
+        //public int AverageRate { get; set; }
 
         // Foreign Key to Specialization
-
         public virtual Specialization Specialization { get; set; }
 
         // Foreign Key to Clinic
@@ -19,10 +22,10 @@ namespace Project.Models
 
         // Foreign Key to User
         [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
-        public virtual User User { get; set; }
+        public string UserId { get; set; }
 
         // Navigation Properties
+        public virtual User User { get; set; }
         public virtual ICollection<Day> Days { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
 

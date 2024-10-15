@@ -25,6 +25,23 @@ namespace Project
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<VeseetaDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Local")));
+
+            builder.Services.AddIdentity<User, IdentityRole>(options =>
+            {
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.User.RequireUniqueEmail = false;
+                options.SignIn.RequireConfirmedAccount = false;
+                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+            })
+            .AddEntityFrameworkStores<VeseetaDBContext>()
+            .AddDefaultTokenProviders();
+
+            
+
             builder.Services.AddScoped<IDayRepository,DayRepository>();
             
             
@@ -73,6 +90,7 @@ namespace Project
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             
