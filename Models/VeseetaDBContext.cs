@@ -6,8 +6,8 @@ namespace Project.Models
 {
     public class VeseetaDBContext : IdentityDbContext<User>
     {
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
-        // optionsBuilder.UseSqlServer("Server=LAPTOP-I2QOALF5\\SQLEXPRESS;Database=VeseetaDBV1;Integrated Security=True;Encrypt=False");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+         optionsBuilder.UseSqlServer("Server=.;Database=VeseetaDBV2;Integrated Security=True;Encrypt=False");
 
 
         public VeseetaDBContext(DbContextOptions options) : base(options) { }

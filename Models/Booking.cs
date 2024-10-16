@@ -9,11 +9,18 @@ namespace Project.Models
         public DateTime Date { get; set; }
         public DateTime Time { get; set; }
 
-        public string Status { get; set; } = "pending"; // Default value = 'pending'
+        public BookingStatus Status { get; set; } // Default value = 'pending'
         public string CancelReasons { get; set; } // Optional cancellation reasons
         public string CanceledBy { get; set; } // Optional who canceled
 
 
+        public enum BookingStatus
+        {
+            Upcoming,
+            Completed,
+            Cancelled,
+            NoShow
+        }
         // Foreign Key to User
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }

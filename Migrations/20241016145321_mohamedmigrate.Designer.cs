@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project.Models;
 
@@ -11,9 +12,11 @@ using Project.Models;
 namespace Project.Migrations
 {
     [DbContext(typeof(VeseetaDBContext))]
-    partial class VeseetaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241016145321_mohamedmigrate")]
+    partial class mohamedmigrate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

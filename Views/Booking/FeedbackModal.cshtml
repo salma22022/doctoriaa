@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/rate.css">
+</head>
+<body>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="modal" class="modal">
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h3 class="modal-title">Feedback</h3>
+                </div>
+                <form id="ratingForm" asp-controller="Doctor" asp-action="SaveRate" asp-route-Id="@Model.DoctorId" method="get">
+                    <div class="modal-body">
+                        <h3>Give us your Feedback about our Service</h3>
+                        <br />
+                        <div class="rating-stars">
+                            <input type="radio" name="Rate" value="0" id="rs0" checked>
+                            <label for="rs0"></label>
+                            <input type="radio" name="Rate" value="1" id="rs1">
+                            <label for="rs1"></label>
+                            <input type="radio" name="Rate" value="2" id="rs2">
+                            <label for="rs2"></label>
+                            <input type="radio" name="Rate" value="3" id="rs3">
+                            <label for="rs3"></label>
+                            <input type="radio" name="Rate" value="4" id="rs4">
+                            <label for="rs4"></label>
+                            <input type="radio" name="Rate" value="5" id="rs5">
+                            <label for="rs5"></label>
+                            <span class="rating-counter"></span>
+                        </div>
+                        <br />
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">Comment</span>
+                            <input type="text" name="Context" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" value="Save Rate" class="btn btn-success">
+                        <span class="btn btn-danger" onclick="closeModal()">Close this</span>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <button onclick="openModal()" class="btn btn-success">Open Rating</button>
+    <script src="~/js/site.js"></script>
+</body>
+</html>
+
+
+

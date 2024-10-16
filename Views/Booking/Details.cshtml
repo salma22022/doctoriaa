@@ -1,0 +1,9 @@
+@model Booking
+
+<h2>Appointment Details</h2>
+<p>Name: @Model.User.Name</p>
+<p>Phone: @Model.User.Phone</p>
+<p>Date: @Model.Date.ToShortDateString()</p>
+<p>Time: @Model.Time.ToShortTimeString()</p>
+<p>Insurance: @Model.Insurance?.Name</p>
+<p>Status: @Model.Status</p>

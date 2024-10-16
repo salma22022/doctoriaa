@@ -9,87 +9,83 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project
 build_property.RootNamespace = Project
-build_property.ProjectDir = D:\doctoriaa-farah\doctoriaa-farah\
+build_property.ProjectDir = D:\doctoriaa\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\doctoriaa-farah\doctoriaa-farah
+build_property.MSBuildProjectDirectory = D:\doctoriaa
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Account/ChangePassword.cshtml]
+[D:/doctoriaa/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Account/Login.cshtml]
+[D:/doctoriaa/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Account/Register.cshtml]
+[D:/doctoriaa/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Account/VerifyEmail.cshtml]
+[D:/doctoriaa/Views/Account/VerifyEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Booking/Details.cshtml]
+[D:/doctoriaa/Views/Booking/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Booking/FeedbackModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xGZWVkYmFja01vZGFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Booking/Index.cshtml]
+[D:/doctoriaa/Views/Booking/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/DoctorAccount/Login.cshtml]
+[D:/doctoriaa/Views/DoctorAccount/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/DoctorAccount/Register.cshtml]
+[D:/doctoriaa/Views/DoctorAccount/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Home/Index.cshtml]
+[D:/doctoriaa/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Home/Privacy.cshtml]
+[D:/doctoriaa/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Shared/Error.cshtml]
+[D:/doctoriaa/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Shared/_AccountLayout.cshtml]
+[D:/doctoriaa/Views/Shared/_AccountLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY2NvdW50TGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Shared/_Footer.cshtml]
+[D:/doctoriaa/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Shared/_HeaderPartial.cshtml]
+[D:/doctoriaa/Views/Shared/_HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/doctoriaa/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/_ViewImports.cshtml]
+[D:/doctoriaa/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/_ViewStart.cshtml]
+[D:/doctoriaa/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/doctoriaa-farah/doctoriaa-farah/Views/Shared/_Layout.cshtml]
+[D:/doctoriaa/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9q8ibpt6yd
