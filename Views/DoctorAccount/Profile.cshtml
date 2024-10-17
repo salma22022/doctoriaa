@@ -1,0 +1,30 @@
+﻿
+@model Project.ViewModels.DoctorProfileViewModel
+<h2>Doctor Profile</h2>
+
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+<p><strong>Bio:</strong> @Model.Bio</p>
+@* <p><strong>Gender:</strong> @Model.Gender</p> *@
+<p><strong>License Number:</strong> @Model.LicenseNumber</p>
+<p>Specialization: @Model.SpecializationName</p>
+
+ <!-- Location details -->
+<h3>Clinic Details</h3>
+<p><strong>Clinic Name:</strong> @Model.ClinicName</p>
+<p><strong>Clinic Price:</strong> @Model.ClinicPrice</p>
+<p><strong>City:</strong> @Model.City</p>
+<p><strong>Area:</strong> @Model.Area</p>
+<p><strong>Address:</strong> @Model.Address</p>
+<p><strong>GPS Location:</strong> @Model.GpsLoc</p>
+<a href="@Url.Action("EditProfile", "Doctor")" class="btn btn-primary">Edit Profile</a>
+
+
+
+
+
+
+
+
+

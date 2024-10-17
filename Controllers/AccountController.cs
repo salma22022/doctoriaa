@@ -1,9 +1,10 @@
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Project.Models;
+using Project.ViewModels; // For your ProfileViewModel
 
 public class AccountController : Controller
 {
@@ -98,4 +99,99 @@ public class AccountController : Controller
     {
         return View();
     }
+
+
+
+    ///////////////////
+    [HttpGet]
+    public async Task<IActionResult> Profile()
+    {
+        // Get the logged-in user
+        var user = await userManager.GetUserAsync(User);
+
+        if (user == null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        // Prepare the ViewModel with user data
+        var model = new ProfileViewModel
+        {
+            Name = user.Name,
+            Email = user.Email,
+            PhoneNumber = user.PhoneNumber,
+            Birthdate = user.Db, // Adjust if necessary
+            Gender = user.Gender
+        };
+
+        return View(model); // Pass the model to the view
+    }
+
+
+   
+    [HttpGet]
+    public async Task<IActionResult> Edit()
+    {
+        var user = await userManager.GetUserAsync(User);
+        if (user == null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        var model = new EditProfileViewModel
+        {
+            Name = user.Name,
+            Email = user.Email,
+            PhoneNumber = user.PhoneNumber,
+            Birthdate = user.Db, // Ensure this is correctly mapped
+            Gender = user.Gender
+        };
+
+        return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(EditProfileViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Update user properties
+            user.Name = model.Name;
+            user.Email = model.Email;
+            user.PhoneNumber = model.PhoneNumber;
+            user.Db = (DateTime)model.Birthdate; // Ensure this is correctly mapped
+            user.Gender = model.Gender;
+
+            // Optionally update the password if provided
+
+
+            var updateResult = await userManager.UpdateAsync(user);
+            if (updateResult.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Profile updated successfully."; // Optional success message
+                return RedirectToAction("Index", "Home");
+            }
+
+            // Handle errors
+            foreach (var error in updateResult.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+        }
+
+        return View(model); // Return the model back to the view if validation fails
+    }
+
+
+
+
+
+
 }

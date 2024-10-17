@@ -1,4 +1,4 @@
-@model DoctorRegisterViewModel;
+@model DoctorRegisterViewModel
 @{
     ViewData["Title"] = "Register as a doctor";
     Layout = "_AccountLayout";
@@ -52,16 +52,17 @@
         </div>
 
         <div class="form-group">
-            <label asp-for="SpecializationName"></label>
-            <select asp-for="SpecializationName" class="form-control">
+            <label asp-for="SpecializationName">Specialization</label>
+            <select asp-for="SpecializationName" class="form-control" asp-items="Html.GetEnumSelectList<SpecializationName>()">
                 <option value="">Select Specialization</option>
-                @foreach (var specialization in Enum.GetValues(typeof(SpecializationName)))
+                @foreach (var specialization in Enum.GetNames(typeof(SpecializationName)))
                 {
                     <option value="@specialization">@specialization</option>
                 }
             </select>
             <span asp-validation-for="SpecializationName" class="text-danger"></span>
         </div>
+
 
         <div class="form-group">
             <label asp-for="ClinicName" class="form-label"></label>
@@ -75,11 +76,25 @@
             <span asp-validation-for="ClinicPrice" class="text-danger"></span>
         </div>
 
+       
         <div class="form-group">
-            <label asp-for="LocationAddress" class="form-label"></label>
-            <input asp-for="LocationAddress" class="form-control item" />
-            <span asp-validation-for="LocationAddress" class="text-danger"></span>
+            <label asp-for="City" class="form-label"></label>
+            <input asp-for="City" class="form-control item" />
+            <span asp-validation-for="City" class="text-danger"></span>
         </div>
+
+        <div class="form-group">
+            <label asp-for="Area" class="form-label"></label>
+            <input asp-for="Area" class="form-control item" />
+            <span asp-validation-for="Area" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" class="form-control item" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+       
 
         <div class="form-group">
             <label asp-for="Password" class="form-label"></label>
@@ -92,12 +107,17 @@
             <input asp-for="ConfirmPassword" class="form-control item" type="password" />
             <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
         </div>
+        <div class="form-group">
+            <label asp-for="GpsLoc" class="form-label"></label>
+            <input asp-for="GpsLoc" class="form-control item" />
+            <span asp-validation-for="GpsLoc" class="text-danger"></span>
+        </div>
 
         <div class="form-group">
             <button type="submit" value="Register" class="btn btn-block create-account">Register</button>
         </div>
 
-        <br />
+        <br/>
 
         <div class="no-account text-center">
             <h6>Already have an account?</h6>
@@ -105,8 +125,6 @@
         </div>
     </form>
 </div>
-
-
 
 @section Scripts
 {
